@@ -42,8 +42,8 @@ def run_test_distance():
     print('       actual:  ', answer)
 
     # Test 3:
-    expected = 0
-    answer = distance(rg.Point(0, 0))
+    expected = 10
+    answer = distance(rg.Point(6, 8))
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
@@ -69,7 +69,7 @@ def distance(point):
 main()
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #
 # READ the following, asking questions as needed.
 # When you believe that you understading what is says about UNIT TESTING,
