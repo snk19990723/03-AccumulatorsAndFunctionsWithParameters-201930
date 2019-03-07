@@ -1,7 +1,7 @@
 ###############################################################################
 #
 # DONE:
-#   1. READ the code below.
+#   1. READ the code below
 #   2. TRACE (by hand) the execution of the code,
 #        predicting what will get printed.
 #   3. Run the code and compare your prediction to what actually was printed.
