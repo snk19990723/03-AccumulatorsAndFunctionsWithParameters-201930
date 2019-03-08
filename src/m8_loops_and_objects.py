@@ -6,18 +6,23 @@ This module demonstrates simple LOOPS of the form:
 and also USING OBJECTS.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Deng Zou.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
 
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
+    window = rg.TurtleWindow()
     # Test your functions by putting calls to them here:
+    #print_sequence1()
+    draw_circles1(5)
+    window.update()
+    window.close_on_mouse_click()
 
 
-def print_sequence1():
+def print_sequence1(n):
     """
     Prints:
        0
@@ -29,7 +34,7 @@ def print_sequence1():
        200
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # DONE: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -37,9 +42,11 @@ def print_sequence1():
     print('--------------------------------------------------')
     print('Running print_sequence1:')
     print('--------------------------------------------------')
+    for k in range (n+1):
+        total= 10* k
+        print(total)
 
-
-def draw_circles1():
+def draw_circles1(n):
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
@@ -58,6 +65,18 @@ def draw_circles1():
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
 
+    turtle = rg.SimpleTurtle()
+    turtle.pen_up()
+    turtle.go_to(rg.Point(200,200))
+    turtle.set_heading(0)
+
+    for k in range(1,n):
+        turtle.pen_up()
+        turtle.right(90)
+        turtle.forward(15+n)
+        turtle.left(90)
+        turtle.pen_down()
+        turtle.draw_circle(10 * k)
 
 def print_sequence2():
     """
