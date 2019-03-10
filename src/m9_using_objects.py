@@ -151,7 +151,6 @@ def lines():
 
     line1.attach_to(window)
     line2.attach_to(window)
-
     window.render()
     window.close_on_mouse_click()
 
